@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F431D6671C9D09AA00AD8432 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431D6661C9D09AA00AD8432 /* AppDelegate.swift */; };
-		F431D6691C9D09AA00AD8432 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431D6681C9D09AA00AD8432 /* ViewController.swift */; };
+		F431D6691C9D09AA00AD8432 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431D6681C9D09AA00AD8432 /* RecordSoundsViewController.swift */; };
 		F431D66C1C9D09AA00AD8432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F431D66A1C9D09AA00AD8432 /* Main.storyboard */; };
 		F431D66E1C9D09AA00AD8432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F431D66D1C9D09AA00AD8432 /* Assets.xcassets */; };
 		F431D6711C9D09AA00AD8432 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F431D66F1C9D09AA00AD8432 /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		F431D6631C9D09AA00AD8432 /* Pitch Perfect 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pitch Perfect 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F431D6661C9D09AA00AD8432 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F431D6681C9D09AA00AD8432 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F431D6681C9D09AA00AD8432 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
 		F431D66B1C9D09AA00AD8432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F431D66D1C9D09AA00AD8432 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F431D6701C9D09AA00AD8432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				F431D6661C9D09AA00AD8432 /* AppDelegate.swift */,
-				F431D6681C9D09AA00AD8432 /* ViewController.swift */,
+				F431D6681C9D09AA00AD8432 /* RecordSoundsViewController.swift */,
 				F431D66A1C9D09AA00AD8432 /* Main.storyboard */,
 				F431D66D1C9D09AA00AD8432 /* Assets.xcassets */,
 				F431D66F1C9D09AA00AD8432 /* LaunchScreen.storyboard */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F431D6691C9D09AA00AD8432 /* ViewController.swift in Sources */,
+				F431D6691C9D09AA00AD8432 /* RecordSoundsViewController.swift in Sources */,
 				F431D6671C9D09AA00AD8432 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
