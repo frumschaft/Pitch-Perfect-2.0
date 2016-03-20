@@ -14,6 +14,7 @@
 		F431D6711C9D09AA00AD8432 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F431D66F1C9D09AA00AD8432 /* LaunchScreen.storyboard */; };
 		F431D67C1C9D09AA00AD8432 /* Pitch_Perfect_2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431D67B1C9D09AA00AD8432 /* Pitch_Perfect_2_0Tests.swift */; };
 		F431D6871C9D09AA00AD8432 /* Pitch_Perfect_2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431D6861C9D09AA00AD8432 /* Pitch_Perfect_2_0UITests.swift */; };
+		F431D6951C9E5DEA00AD8432 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431D6941C9E5DEA00AD8432 /* PlaySoundsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F431D6821C9D09AA00AD8432 /* Pitch Perfect 2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pitch Perfect 2.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F431D6861C9D09AA00AD8432 /* Pitch_Perfect_2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_Perfect_2_0UITests.swift; sourceTree = "<group>"; };
 		F431D6881C9D09AA00AD8432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F431D6941C9E5DEA00AD8432 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				F431D6661C9D09AA00AD8432 /* AppDelegate.swift */,
 				F431D6681C9D09AA00AD8432 /* RecordSoundsViewController.swift */,
+				F431D6941C9E5DEA00AD8432 /* PlaySoundsViewController.swift */,
 				F431D66A1C9D09AA00AD8432 /* Main.storyboard */,
 				F431D66D1C9D09AA00AD8432 /* Assets.xcassets */,
 				F431D66F1C9D09AA00AD8432 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F431D6691C9D09AA00AD8432 /* RecordSoundsViewController.swift in Sources */,
+				F431D6951C9E5DEA00AD8432 /* PlaySoundsViewController.swift in Sources */,
 				F431D6671C9D09AA00AD8432 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
