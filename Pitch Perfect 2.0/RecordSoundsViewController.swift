@@ -2,14 +2,14 @@
 //  RecordSoundsViewController.swift
 //  Pitch Perfect 2.0
 //
-//  Created by Gavriel on 3/18/16.
+//  Created by frumschaft on 3/18/16.
 //  Copyright © 2016 Frumschaft. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate  { // #### VIEW ####
+class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate                    { // ### VIEW ###
 
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
@@ -17,16 +17,16 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate  { 
     
     var audioRecorder:AVAudioRecorder!
     
-    override func viewDidLoad()                                                                 { // ## 1 ##
+    override func viewDidLoad()                                                                 { //
         super.viewDidLoad()
         // Do any additional setup after loading
         // the view, typically from a nib.
-                                                                                                } // ## 1 ##
+                                                                                                } //
     
-    override func didReceiveMemoryWarning()                                                     { // ## 2 ##
+    override func didReceiveMemoryWarning()                                                     { //
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-                                                                                                } // ## 2 ##
+                                                                                                } //
     
     @IBAction func recordAudio(sender: AnyObject)                                               { //
         print("That tickles!")
@@ -79,6 +79,6 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate  { 
             playSoundsVC.recordedAudio = recordedAudioURL }
                                                                                                 } //
     
-    // end of UIViewController
-                                                    } // #### VIEW ####
+// end of UIViewController
+                                                                                                } // #### VIEW ####
 

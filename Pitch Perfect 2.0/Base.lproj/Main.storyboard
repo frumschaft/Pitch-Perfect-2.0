@@ -146,13 +146,13 @@
                                         </subviews>
                                         <animations/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uav-jS-9rr">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uav-jS-9rr">
                                         <rect key="frame" x="0.0" y="402" width="560" height="134"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sov-8p-89q">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sov-8p-89q">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="134"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gk-fM-Q5N" userLabel="stopButton">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gk-fM-Q5N" userLabel="stopButton">
                                                         <rect key="frame" x="0.0" y="0.0" width="560" height="134"/>
                                                         <animations/>
                                                         <state key="normal" image="stopButton"/>
@@ -180,8 +180,8 @@
                     </view>
                     <connections>
                         <outlet property="chipmunkButton" destination="E3w-NK-p7x" id="Je5-T9-psW"/>
-                        <outlet property="darthVaderButton" destination="CBn-GV-I8J" id="yz6-LQ-HlV"/>
-                        <outlet property="parrotButton" destination="6Op-wp-lbQ" id="4qp-VC-oUf"/>
+                        <outlet property="darthVaderButton" destination="CBn-GV-I8J" id="cdP-ei-LcQ"/>
+                        <outlet property="parrotButton" destination="6Op-wp-lbQ" id="m4c-Fj-dc2"/>
                         <outlet property="rabbitButton" destination="BQ2-H5-IAh" id="CAI-TO-9nh"/>
                         <outlet property="reverbButton" destination="biX-Ph-6HP" id="zx7-Dx-ngl"/>
                         <outlet property="snailButton" destination="2St-1C-szq" id="9Ad-GC-PYr"/>
