@@ -2,14 +2,14 @@
 //  RecordSoundsViewController.swift
 //  Pitch Perfect 2.0
 //
-//  Created by Gavriel on 3/18/16.
+//  Created by frumschaft on 3/18/16.
 //  Copyright © 2016 Frumschaft. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate  { // #### VIEW ####
+class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate                    { // ### VIEW ###
 
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
@@ -17,16 +17,16 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate  { 
     
     var audioRecorder:AVAudioRecorder!
     
-    override func viewDidLoad()                                                                 { // ## 1 ##
+    override func viewDidLoad()                                                                 { //
         super.viewDidLoad()
         // Do any additional setup after loading
         // the view, typically from a nib.
-                                                                                                } // ## 1 ##
+                                                                                                } //
     
-    override func didReceiveMemoryWarning()                                                     { // ## 2 ##
+    override func didReceiveMemoryWarning()                                                     { //
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-                                                                                                } // ## 2 ##
+                                                                                                } //
     
     @IBAction func recordAudio(sender: AnyObject)                                               { //
         print("That tickles!")
@@ -34,7 +34,7 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate  { 
         stopRecordingButton.enabled = true
         recordButton.enabled = false
         
-        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentationDirectory,.UserDomainMask, true)[0] as String
+        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory,.UserDomainMask, true)[0] as String
         
         let recordingName = "recordedVoice.wav"
         let pathArray = [dirPath, recordingName]
@@ -67,8 +67,8 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate  { 
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool)    { //
         print("Audio recording finished.")
         if (flag) {
-            self.performSegueWithIdentifier("stopRecording", sender: audioRecorder.url) }
-        else {
+            self.performSegueWithIdentifier("stopRecording", sender: audioRecorder.url)
+        } else {
             print("Saving of audio failed") }
                                                                                                 } //
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)                 { //
@@ -76,9 +76,9 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate  { 
             let playSoundsVC = segue.destinationViewController as!
                 PlaySoundsViewController
             let recordedAudioURL = sender as! NSURL
-            PlaySoundsVC.recordedAudio = recordedAudioURL}
+            playSoundsVC.recordedAudio = recordedAudioURL }
                                                                                                 } //
     
-    // end of UIViewController
-                                                    } // #### VIEW ####
+// end of UIViewController
+                                                                                                } // #### VIEW ####
 
