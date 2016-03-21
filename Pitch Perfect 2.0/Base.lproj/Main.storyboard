@@ -120,7 +120,7 @@
                                                 <animations/>
                                                 <state key="normal" image="echoButton"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biX-Ph-6HP" userLabel="reverbButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biX-Ph-6HP" userLabel="reverbButton">
                                                 <rect key="frame" x="280" y="0.0" width="280" height="179"/>
                                                 <animations/>
                                                 <state key="normal" image="reverbButton"/>
