@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Pitch Perfect 2.0
 //
-//  Created by Gavriel on 3/18/16.
+//  Created by frumschaft on 3/18/16.
 //  Copyright © 2016 Frumschaft. All rights reserved.
 //
 

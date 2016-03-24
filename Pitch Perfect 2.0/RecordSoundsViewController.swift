@@ -29,7 +29,7 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate    
                                                                                                 } //
     
     @IBAction func recordAudio(sender: AnyObject)                                               { //
-        print("That tickles!")
+        print("recordButton pushed.")
         recordingLabel.text = "Recording in progress …"
         stopRecordingButton.enabled = true
         recordButton.enabled = false
@@ -52,7 +52,7 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate    
                                                                                                 } //
     
     @IBAction func stopRecording(sender: AnyObject)                                             { //
-        print("Thanks!")
+        print("stopRecordingButton pushed.")
         recordButton.enabled = true
         stopRecordingButton.enabled = false
         recordingLabel.text = "Tap to Record"
@@ -76,7 +76,7 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate    
             let playSoundsVC = segue.destinationViewController as!
                 PlaySoundsViewController
             let recordedAudioURL = sender as! NSURL
-            playSoundsVC.recordedAudio = recordedAudioURL }
+            playSoundsVC.recordedAudioURL = recordedAudioURL }
                                                                                                 } //
     
 // end of UIViewController
