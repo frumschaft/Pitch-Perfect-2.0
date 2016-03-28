@@ -64,6 +64,7 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate    
     override func viewWillAppear(animated: Bool)                                                { //
         stopRecordingButton.enabled = false
                                                                                                 } //
+    // called by system when recording is stopped
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool)    { //
         print("Audio recording finished.")
         if (flag) {
@@ -71,6 +72,7 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate    
         } else {
             print("Saving of audio failed") }
                                                                                                 } //
+    // transition to play sounds screen only after recording is successfully saved
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)                 { //
         if (segue.identifier == "stopRecording") {
             let playSoundsVC = segue.destinationViewController as!
