@@ -25,8 +25,6 @@ class PlaySoundsViewController: UIViewController                                
     var audioEngine: AVAudioEngine!
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: NSTimer!
-    var duration: NSTimeInterval!
-    
     
     enum ButtonType: Int { case Slow = 0, Fast, Chipmunk, DarthVader, Parrot, Reverb }
     
@@ -57,7 +55,11 @@ class PlaySoundsViewController: UIViewController                                
     override func viewDidLoad()                                                     { //
         super.viewDidLoad()
         setupAudio()
-        durationLabel.text = String(duration)
+        let audioAssent:AVURLAsset = AVURLAsset(URL: recordedAudioURL, options: nil)
+        let audioDuration = audioAssent.duration;
+        let audioDurationSeconds:Double = CMTimeGetSeconds(audioDuration)
+        print (audioDurationSeconds)
+        durationLabel.text = "Recording is " + String(format :"%.3f", audioDurationSeconds) + " seconds long."
         // Do any additional setup after loading the view.
                                                                                     } //
     override func viewDidAppear(animated: Bool)                                     { //
