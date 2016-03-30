@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class PlaySoundsViewController: UIViewController                                    { // ### VIEW ###
+class PlaySoundsViewController: UIViewController                                                        { // ### VIEW ###
     
     @IBOutlet weak var snailButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
@@ -29,7 +29,7 @@ class PlaySoundsViewController: UIViewController                                
     enum ButtonType: Int { case Slow = 0, Fast, Chipmunk, DarthVader, Parrot, Reverb }
     
     // attach audio modification to button
-    @IBAction func playSoundForButton(sender: UIButton)                             { //
+    @IBAction func playSoundForButton(sender: UIButton)                                                 { //
         print("Play sound button pressed")
         switch(ButtonType(rawValue: sender.tag)!)       { // switch on
         case .Slow:
@@ -47,26 +47,35 @@ class PlaySoundsViewController: UIViewController                                
                                                         } // switch off
         
         configureUI(.Playing)
-                                                                                    } //
-    @IBAction func stopButtonPressed(sender: UIButton)                              { //
+                                                                                                        } //
+    @IBAction func stopButtonPressed(sender: UIButton)                                                  { //
         print("Stop audio button pressed")
         stopAudio()
-                                                                                    } //
-    override func viewDidLoad()                                                     { //
+                                                                                                        } //
+    override func viewDidLoad()                                                                         { //
         super.viewDidLoad()
         setupAudio()
-        let audioAssent:AVURLAsset = AVURLAsset(URL: recordedAudioURL, options: nil)
-        let audioDuration = audioAssent.duration;
-        let audioDurationSeconds:Double = CMTimeGetSeconds(audioDuration)
-        print (audioDurationSeconds)
-        durationLabel.text = "Recording is " + String(format :"%.3f", audioDurationSeconds) + " seconds long."
+        let audioAssent:AVURLAsset = AVURLAsset(URL: recordedAudioURL, options: nil)                                // —
+        let audioDuration = audioAssent.duration;                                                                   //  | This code thanks to
+        let audioDurationSeconds:Double = CMTimeGetSeconds(audioDuration)                                           //  | course mentor Shruti
+        print (audioDurationSeconds)                                                                                //  | for helping me
+        durationLabel.text = "Recording is " + String(format :"%.3f", audioDurationSeconds) + " seconds long."      // _| figure it out!
         // Do any additional setup after loading the view.
-                                                                                    } //
-    override func viewDidAppear(animated: Bool)                                     { //
+                                                                                                        } //
+    override func viewDidLayoutSubviews()                                                               { // Thanks to Rob Mayoff stackoverflow.com/questions/17258084/
+        super.viewDidLayoutSubviews()                                                                     // for this function,
+        let topColor = UIColor(red: (15/255.0), green: (118/255.0), blue: (128/255.0), alpha: 1)
+        let bottomColor = UIColor(red: (84/255.0), green: (187/255.0), blue: (187/255.0), alpha: 1)
+        let layer = CAGradientLayer()                                                                     // and Paul Hudson for this simple gradient code.
+        layer.frame = self.view.frame                                                                     // hackingwithswift.com/example-code/calayer/how-to-draw-color-gradients-using-cagradientlayer
+        layer.colors = [topColor.CGColor, bottomColor.CGColor]
+        view.layer.addSublayer(layer)                                                                   } //
+    
+    override func viewDidAppear(animated: Bool)                                                         { //
         configureUI(.NotPlaying)
-                                                                                    } //
-    override func didReceiveMemoryWarning()                                         { //
+                                                                                                        } //
+    override func didReceiveMemoryWarning()                                                             { //
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-                                                                                    } //
-                                                                                    } // ### VIEW ###
+                                                                                                        } //
+                                                                                                        } // ### VIEW ###
