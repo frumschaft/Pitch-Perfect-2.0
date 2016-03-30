@@ -32,9 +32,8 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate    
         let layer = CAGradientLayer()                                                                     // and Paul Hudson for this simple gradient code.
         layer.frame = self.view.frame                                                                     // hackingwithswift.com/example-code/calayer/how-to-draw-color-gradients-using-cagradientlayer
         layer.colors = [topColor.CGColor, bottomColor.CGColor]
-        view.layer.addSublayer(layer)
-        
-        func sendSubviewToBack(self: UIView)  {}                                                          } //
+        view.layer.insertSublayer(layer, atIndex: 0)
+                                                                                                        } //
     
     override func didReceiveMemoryWarning()                                                             { //
         super.didReceiveMemoryWarning()

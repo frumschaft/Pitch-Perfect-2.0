@@ -58,7 +58,7 @@ class PlaySoundsViewController: UIViewController                                
         let audioAssent:AVURLAsset = AVURLAsset(URL: recordedAudioURL, options: nil)                                // —
         let audioDuration = audioAssent.duration;                                                                   //  | This code thanks to
         let audioDurationSeconds:Double = CMTimeGetSeconds(audioDuration)                                           //  | course mentor Shruti
-        print (audioDurationSeconds)                                                                                //  | for helping me
+        print (audioDurationSeconds)                      // round duration to 3 decimal places                     //  | for helping me
         durationLabel.text = "Recording is " + String(format :"%.3f", audioDurationSeconds) + " seconds long."      // _| figure it out!
         // Do any additional setup after loading the view.
                                                                                                         } //
@@ -69,7 +69,7 @@ class PlaySoundsViewController: UIViewController                                
         let layer = CAGradientLayer()                                                                     // and Paul Hudson for this simple gradient code.
         layer.frame = self.view.frame                                                                     // hackingwithswift.com/example-code/calayer/how-to-draw-color-gradients-using-cagradientlayer
         layer.colors = [topColor.CGColor, bottomColor.CGColor]
-        view.layer.addSublayer(layer)                                                                   } //
+        view.layer.insertSublayer(layer, atIndex: 0)                                                    } //
     
     override func viewDidAppear(animated: Bool)                                                         { //
         configureUI(.NotPlaying)
