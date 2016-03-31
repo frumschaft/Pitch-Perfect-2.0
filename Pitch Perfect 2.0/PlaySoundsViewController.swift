@@ -33,17 +33,23 @@ class PlaySoundsViewController: UIViewController {
         print("Play sound button pressed")
         switch(ButtonType(rawValue: sender.tag)!) {
         case .Slow:
-            playSound(rate: 0.5)        // slows rate of playback to half speed with no change in pitch
+            // slows rate of playback to half speed with no change in pitch
+            playSound(rate: 0.5)
         case .Fast:
-            playSound(rate: 1.5)        // speeds up rate of playback to 1.5 times speed with no change in pitch
+            // speeds up rate of playback to 1.5 times speed with no change in pitch
+            playSound(rate: 1.5)
         case .Chipmunk:
-            playSound(pitch: 1000)      // raises pitch of playback
+            // raises pitch of playback
+            playSound(pitch: 1000)
         case .DarthVader:
-            playSound(pitch: -1000)     // lowers pitch of playback
+            // lowers pitch of playback
+            playSound(pitch: -1000)
         case .Parrot:
-            playSound(echo: true)       // echoes playback
+            // echoes playback
+            playSound(echo: true)
         case .Reverb:
-            playSound(reverb: true)     // applies reverberation to playback
+            // applies reverberation to playback
+            playSound(reverb: true)
         }
         configureUI(.Playing)
     }
