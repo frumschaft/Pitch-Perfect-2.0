@@ -16,7 +16,6 @@
 		F431D6871C9D09AA00AD8432 /* Pitch_Perfect_2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431D6861C9D09AA00AD8432 /* Pitch_Perfect_2_0UITests.swift */; };
 		F431D6951C9E5DEA00AD8432 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431D6941C9E5DEA00AD8432 /* PlaySoundsViewController.swift */; };
 		F431D6991CA0A62A00AD8432 /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431D6981CA0A62A00AD8432 /* PlaySoundsViewController+Audio.swift */; };
-		F4FD935E1CAA5A520022C1E5 /* CAGradientLayer+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD935D1CAA5A520022C1E5 /* CAGradientLayer+Convenience.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		F431D6881C9D09AA00AD8432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F431D6941C9E5DEA00AD8432 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		F431D6981CA0A62A00AD8432 /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
-		F4FD935D1CAA5A520022C1E5 /* CAGradientLayer+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Convenience.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +105,6 @@
 				F431D6681C9D09AA00AD8432 /* RecordSoundsViewController.swift */,
 				F431D6941C9E5DEA00AD8432 /* PlaySoundsViewController.swift */,
 				F431D6981CA0A62A00AD8432 /* PlaySoundsViewController+Audio.swift */,
-				F4FD935D1CAA5A520022C1E5 /* CAGradientLayer+Convenience.swift */,
 				F431D66A1C9D09AA00AD8432 /* Main.storyboard */,
 				F431D66D1C9D09AA00AD8432 /* Assets.xcassets */,
 				F431D66F1C9D09AA00AD8432 /* LaunchScreen.storyboard */,
@@ -268,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4FD935E1CAA5A520022C1E5 /* CAGradientLayer+Convenience.swift in Sources */,
 				F431D6691C9D09AA00AD8432 /* RecordSoundsViewController.swift in Sources */,
 				F431D6991CA0A62A00AD8432 /* PlaySoundsViewController+Audio.swift in Sources */,
 				F431D6951C9E5DEA00AD8432 /* PlaySoundsViewController.swift in Sources */,

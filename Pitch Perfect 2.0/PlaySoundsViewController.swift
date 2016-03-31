@@ -55,17 +55,10 @@ class PlaySoundsViewController: UIViewController                                
     override func viewDidLoad()                                                                         { //
         super.viewDidLoad()
         setupAudio()
-        let audioPlayer:AVAudioPlayer? = try? AVAudioPlayer(contentsOfURL: recordedAudioURL)
-        if let player = audioPlayer {
-            durationLabel.text = "Recording is " + String(format :"%.3f",  player.duration) + " seconds long."
-        }
-        // let audioAssent:AVURLAsset = AVURLAsset(URL: recordedAudioURL, options: nil)                                // —
-        // let audioDuration = audioAssent.duration;                                                                   //  | This code thanks to
-        // let audioDurationSeconds:Double = CMTimeGetSeconds(audioDuration)                                           //  | course mentor Shruti
-        // print (audioDurationSeconds)                      // round duration to 3 decimal places                     //  | for helping me
-        // durationLabel.text = "Recording is " + String(format :"%.3f", audioDurationSeconds) + " seconds long."      // _| figure it out!
-        // Do any additional setup after loading the view.
-                                                                                                        } //
+        let audioPlayer:AVAudioPlayer? = try? AVAudioPlayer(contentsOfURL: recordedAudioURL)                        // These lines thanks to
+        if let player = audioPlayer {                                                                               // course mentor Shruti for helping
+            durationLabel.text = "Recording is " + String(format :"%.3f",  player.duration) + " seconds long."      // me to figure out.
+                                    }                                                                   } //
     
     override func viewDidAppear(animated: Bool)                                                         { //
         configureUI(.NotPlaying)
