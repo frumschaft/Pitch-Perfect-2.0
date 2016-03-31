@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class PlaySoundsViewController: UIViewController                                                        { // ### VIEW ###
+class PlaySoundsViewController: UIViewController {
     
     @IBOutlet weak var snailButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
@@ -29,9 +29,9 @@ class PlaySoundsViewController: UIViewController                                
     enum ButtonType: Int { case Slow = 0, Fast, Chipmunk, DarthVader, Parrot, Reverb }
     
     // attach audio modification to button
-    @IBAction func playSoundForButton(sender: UIButton)                                                 { //
+    @IBAction func playSoundForButton(sender: UIButton) {
         print("Play sound button pressed")
-        switch(ButtonType(rawValue: sender.tag)!)       { // switch on
+        switch(ButtonType(rawValue: sender.tag)!) {
         case .Slow:
             playSound(rate: 0.5)        // slows rate of playback to half speed with no change in pitch
         case .Fast:
@@ -44,27 +44,31 @@ class PlaySoundsViewController: UIViewController                                
             playSound(echo: true)       // echoes playback
         case .Reverb:
             playSound(reverb: true)     // applies reverberation to playback
-                                                        } // switch off
-        
+        }
         configureUI(.Playing)
-                                                                                                        } //
-    @IBAction func stopButtonPressed(sender: UIButton)                                                  { //
+    }
+    
+    @IBAction func stopButtonPressed(sender: UIButton) {
         print("Stop audio button pressed")
         stopAudio()
-                                                                                                        } //
-    override func viewDidLoad()                                                                         { //
+    }
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
-        let audioPlayer:AVAudioPlayer? = try? AVAudioPlayer(contentsOfURL: recordedAudioURL)                        // These lines thanks to
-        if let player = audioPlayer {                                                                               // course mentor Shruti for helping
-            durationLabel.text = "Recording is " + String(format :"%.3f",  player.duration) + " seconds long."      // me to figure out.
-                                    }                                                                   } //
+        // These lines thanks to course mentor Shruti for helping me to figure out.
+        let audioPlayer:AVAudioPlayer? = try? AVAudioPlayer(contentsOfURL: recordedAudioURL)
+        if let player = audioPlayer {
+            durationLabel.text = "Recording is " + String(format :"%.3f",  player.duration) + " seconds long."
+        }
+    }
     
-    override func viewDidAppear(animated: Bool)                                                         { //
+    override func viewDidAppear(animated: Bool) {
         configureUI(.NotPlaying)
-                                                                                                        } //
-    override func didReceiveMemoryWarning()                                                             { //
+    }
+    
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-                                                                                                        } //
-                                                                                                        } // ### VIEW ###
+    }
+}

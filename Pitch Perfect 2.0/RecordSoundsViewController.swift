@@ -11,7 +11,7 @@ import AVFoundation
 
 
 
-class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate                            { // ### VIEW ###
+class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate {
 
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
@@ -19,18 +19,18 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate    
     
     var audioRecorder:AVAudioRecorder!
     
-    override func viewDidLoad()                                                                         { //
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading
         // the view, typically from a nib.
-                                                                                                        } //
+    }
     
-    override func didReceiveMemoryWarning()                                                             { //
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-                                                                                                        } //
+    }
     
-    @IBAction func recordAudio(sender: AnyObject)                                                       { //
+    @IBAction func recordAudio(sender: AnyObject) {
         print("recordButton pushed.")
         recordingLabel.text = "Recording in progress …"
         stopRecordingButton.enabled = true
@@ -51,9 +51,9 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate    
         audioRecorder.meteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
-                                                                                                        } //
+    }
     
-    @IBAction func stopRecording(sender: AnyObject)                                                     { //
+    @IBAction func stopRecording(sender: AnyObject) {
         print("stopRecordingButton pushed.")
         recordButton.enabled = true
         stopRecordingButton.enabled = false
@@ -61,28 +61,29 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate    
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
-                                                                                                        } //
+    }
     
-    override func viewWillAppear(animated: Bool)                                                        { //
+    override func viewWillAppear(animated: Bool) {
         stopRecordingButton.enabled = false
-                                                                                                        } //
+    }
+    
     // called by system when recording is stopped
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool)            { //
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         print("Audio recording finished.")
         if (flag) {
             self.performSegueWithIdentifier("stopRecording", sender: audioRecorder.url)
         } else {
             print("Saving of audio failed") }
-                                                                                                        } //
+    }
+    
     // transition to play sounds screen only after recording is successfully saved
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)                         { //
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "stopRecording") {
             let playSoundsVC = segue.destinationViewController as!
                 PlaySoundsViewController
             let recordedAudioURL = sender as! NSURL
             playSoundsVC.recordedAudioURL = recordedAudioURL }
-                                                                                                        } //
+    }
     
-// end of UIViewController
-                                                                                                        } // #### VIEW ####
+}
 
