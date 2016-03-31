@@ -25,16 +25,6 @@ class RecordSoundsViewController: UIViewController , AVAudioRecorderDelegate    
         // the view, typically from a nib.
                                                                                                         } //
     
-    override func viewDidLayoutSubviews()                                                               { // Thanks to Rob Mayoff stackoverflow.com/questions/17258084/
-        super.viewDidLayoutSubviews()                                                                     // for this function,
-        let topColor = UIColor(red: (15/255.0), green: (118/255.0), blue: (128/255.0), alpha: 1)
-        let bottomColor = UIColor(red: (84/255.0), green: (187/255.0), blue: (187/255.0), alpha: 1)
-        let layer = CAGradientLayer()                                                                     // and Paul Hudson for this simple gradient code.
-        layer.frame = self.view.frame                                                                     // hackingwithswift.com/example-code/calayer/how-to-draw-color-gradients-using-cagradientlayer
-        layer.colors = [topColor.CGColor, bottomColor.CGColor]
-        view.layer.insertSublayer(layer, atIndex: 0)
-                                                                                                        } //
-    
     override func didReceiveMemoryWarning()                                                             { //
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -53,6 +53,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <color key="backgroundColor" red="0.027470608558790341" green="0.79844977094240832" blue="0.59154220748027764" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="7vu-kp-S75" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ni7-GG-qLe"/>
                             <constraint firstItem="7vu-kp-S75" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qSt-88-hRu"/>
@@ -171,6 +172,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <color key="backgroundColor" red="0.027470608559999998" green="0.79844977090000002" blue="0.59154220749999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xqB-OU-CbY" firstAttribute="top" secondItem="lfZ-RY-rr6" secondAttribute="bottom" id="Zx4-sf-T22"/>
                             <constraint firstItem="lfZ-RY-rr6" firstAttribute="top" secondItem="WfI-DF-W1M" secondAttribute="bottom" id="neB-qi-0NA"/>
